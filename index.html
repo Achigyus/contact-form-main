@@ -18,35 +18,35 @@
       <!-- Heading -->
       <h1 class="contact_us_h1">Contact Us</h1>
       <!-- Form Starts -->
-      <form action="" class="contact_form">
+      <form action="" class="contact_form" novalidate>
 
         <div class="user_biodata_msg">
 
           <div class="full_name_wrap">
             <div class="first_name">
               <label for="firstname" class="first_name_label">First Name <span class="required">*</span></label>
-              <input type="text" id="firstname" class="first_name_input" placeholder="e.g. Stephen">
+              <input type="text" name="firstname" id="firstname" class="first_name_input" placeholder="e.g. Stephen" required autocomplete="name">
               <p class="error error_first_name" id="error_first_name">This field is required</p>
             </div>
 
             <div class="last_name">
               <label for="lastname" class="last_name_label">Last Name <span class="required">*</span></label>
-              <input type="text" id="lastname" class="last_name_input" placeholder="e.g. Huang">
+              <input type="text" name="lastname" id="lastname" class="last_name_input" placeholder="e.g. Huang" required>
               <p class="error error_last_name" id="error_last_name">This field is required</p>
             </div>
           </div>
 
           <div class="email_wrap">
             <label for="email" class="email_label">Email Address <span class="required">*</span></label>
-            <input type="email" name="email" id="email" class="email_input" placeholder="e.g. stephen.huang@gmail.com" >
-            <p class="error error_email" id="error_email">Please enter a valid email address</p>
+            <input type="email" name="email" id="email" class="email_input" placeholder="e.g. stephen.huang@gmail.com" required >
+            <p class="error error_email" id="error_email">This field is required</p>
           </div>
 
           <div class="query_type_wrap">
             <fieldset>
               <legend>Query Type <span class="required">*</span></legend>
               <div class="query_wrap">
-                <input type="radio" name="querytype" id="general_enquiry" class="querytype_input" value="General Enquiry">
+                <input type="radio" name="querytype" id="general_enquiry" class="querytype_input" value="General Enquiry" required>
                 <label for="general_enquiry" class="general_enquiry_label">General Enquiry</label>
               </div>
 
@@ -60,13 +60,13 @@
 
           <div class="message_wrap">
             <label for="message" class="message_label">Message <span class="required">*</span></label>
-            <textarea name="message" id="message" class="message_input" placeholder="e.g. I would like to know more about your services"></textarea>
+            <textarea name="message" id="message" class="message_input" placeholder="e.g. I would like to know more about your services" required></textarea>
             <p class="error error_message" id="error_message">This field is required</p>
           </div>
         </div>
 
         <div class="consent_to_contact">
-          <input type="checkbox" id="consent" class="consent_checkbox">
+          <input type="checkbox" name="consent" id="consent" class="consent_checkbox" required>
           <label for="consent" class="consent_label">I consent to being contacted by the team <span class="required">*</span></label>
           <p class="error error_consent" id="error_consent">To submit this form, please consent to being contacted</p>
         </div>

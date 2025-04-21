@@ -19,6 +19,19 @@ body
 .fw700
     font-weight: 700
 
+.error
+    display: none
+    color: vars.$red
+
+.error_consent.active, .error_message.active, .error_query_type.active, .error_last_name.active, .error_first_name.active, .error_email.active
+    display: block
+
+.success_message
+    display: none
+
+.success_message.active
+    display: block
+
 .attribution_h2
     text-align: center
     padding: 0.5rem vars.$spacing_3
