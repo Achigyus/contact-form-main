@@ -16,7 +16,7 @@
   <main class="main">
     <div class="main_wrap">
       <!-- Heading -->
-      <h1 class="contact_us_h1">Contact Us</h1>
+      <h1 class="contact_us_h1 fw700">Contact Us</h1>
       <!-- Form Starts -->
       <form action="" class="contact_form" novalidate>
 
@@ -24,42 +24,42 @@
 
           <div class="full_name_wrap">
             <div class="first_name">
-              <label for="firstname" class="first_name_label">First Name <span class="required">*</span></label>
+              <label for="firstname" class="first_name_label fw400">First Name <span class="required">*</span></label>
               <input type="text" name="firstname" id="firstname" class="first_name_input" placeholder="e.g. Stephen" required autocomplete="name">
               <p class="error error_first_name" id="error_first_name">This field is required</p>
             </div>
 
             <div class="last_name">
-              <label for="lastname" class="last_name_label">Last Name <span class="required">*</span></label>
+              <label for="lastname" class="last_name_label fw400">Last Name <span class="required">*</span></label>
               <input type="text" name="lastname" id="lastname" class="last_name_input" placeholder="e.g. Huang" required>
               <p class="error error_last_name" id="error_last_name">This field is required</p>
             </div>
           </div>
 
           <div class="email_wrap">
-            <label for="email" class="email_label">Email Address <span class="required">*</span></label>
+            <label for="email" class="email_label fw400">Email Address <span class="required">*</span></label>
             <input type="email" name="email" id="email" class="email_input" placeholder="e.g. stephen.huang@gmail.com" required >
             <p class="error error_email" id="error_email">This field is required</p>
           </div>
 
           <div class="query_type_wrap">
-            <fieldset>
+            <fieldset class="query_type_fieldset">
               <legend>Query Type <span class="required">*</span></legend>
               <div class="query_wrap">
                 <input type="radio" name="querytype" id="general_enquiry" class="querytype_input" value="General Enquiry" required>
-                <label for="general_enquiry" class="general_enquiry_label">General Enquiry</label>
+                <label for="general_enquiry" class="general_enquiry_label fw400">General Enquiry</label>
               </div>
 
               <div class="query_wrap">
                 <input type="radio" name="querytype" id="support_request" class="querytype_input" value="Support Request">
-                <label for="support_request" class="support_request_label">Support Request</label>
+                <label for="support_request" class="support_request_label fw400">Support Request</label>
               </div>
             </fieldset>
             <p class="error error_query_type">Please select a query type</p>
           </div>
 
           <div class="message_wrap">
-            <label for="message" class="message_label">Message <span class="required">*</span></label>
+            <label for="message" class="message_label fw400">Message <span class="required">*</span></label>
             <textarea name="message" id="message" class="message_input" placeholder="e.g. I would like to know more about your services" required></textarea>
             <p class="error error_message" id="error_message">This field is required</p>
           </div>

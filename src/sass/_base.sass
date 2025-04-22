@@ -19,6 +19,82 @@ body
 .fw700
     font-weight: 700
 
+.main
+    padding: vars.$spacing_4 vars.$spacing_2
+
+.main_wrap
+    background-color: vars.$white
+    padding: vars.$spacing_3
+    border-radius: vars.$spacing_2
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_4
+
+.contact_us_h1
+    color: vars.$gray_900
+    font-size: clamp(2rem, 2vw, 2rem)
+    line-height: 1.0
+
+.contact_form
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_5
+
+.user_biodata_msg, .full_name_wrap
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_3
+
+
+.first_name, .last_name, .email_wrap, .message_wrap
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_1
+
+.query_type_fieldset
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_2
+    border: none
+
+    legend
+        margin-bottom: vars.$spacing_2
+
+.first_name_label, .last_name_label, .email_label, .message_label
+    font-size: clamp(1rem, 2vw, 1.25rem)
+    line-height: 1.5
+    color: vars.$gray_900
+    display: flex
+    gap: vars.$spacing_1
+    align-items: center
+
+    span
+        color: vars.$green_600
+
+.first_name_input, .last_name_input, .email_input, .message_input
+    border: 1px solid vars.$gray_500
+    border-radius: vars.$spacing_1
+    padding: 0.75rem 1.5rem
+    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    line-height: 1.5
+    color: vars.$gray_900
+
+.query_wrap
+    border: 1px solid vars.$gray_500
+    border-radius: vars.$spacing_1
+    padding: 0.75rem 1.5rem
+    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    line-height: 1.5
+    color: vars.$gray_900
+    display: flex
+    gap: 0.75rem
+    align-items: center
+
+    label
+        font-size: clamp(1.125rem, 2vw, 1.25rem)
+        line-height: 1.5
+        color: vars.$gray_900
+
 .error
     display: none
     color: vars.$red
