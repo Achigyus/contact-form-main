@@ -59,6 +59,11 @@ body
 
     legend
         margin-bottom: vars.$spacing_2
+        display: flex
+        gap: vars.$spacing_1
+
+        span
+            color: vars.$green_600
 
 .first_name_label, .last_name_label, .email_label, .message_label
     font-size: clamp(1rem, 2vw, 1.25rem)
@@ -78,6 +83,13 @@ body
     font-size: clamp(1.125rem, 2vw, 1.25rem)
     line-height: 1.5
     color: vars.$gray_900
+    cursor: pointer
+
+    &:hover, &:focus, &:active
+        border: 1px solid vars.$green_600
+        outline: 1px solid vars.$green_600
+
+
 
 .query_wrap
     border: 1px solid vars.$gray_500
@@ -89,11 +101,47 @@ body
     display: flex
     gap: 0.75rem
     align-items: center
+    cursor: pointer
 
+    &:hover
+        border: 1px solid vars.$green_600
+        
     label
         font-size: clamp(1.125rem, 2vw, 1.25rem)
         line-height: 1.5
         color: vars.$gray_900
+
+.consent_to_contact
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_1
+
+.consent_wrap
+    display: flex
+    gap: vars.$spacing_2
+    align-items: center
+
+.consent_label
+    font-size: clamp(1rem, 2vw, 1.25rem)
+    line-height: 1.5
+    color: vars.$gray_900
+    margin-left: 1rem
+
+    span
+        color: vars.$green_600
+
+.submit_btn
+    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    line-height: 1.5
+    color: vars.$white
+    background-color: vars.$green_600
+    padding: vars.$spacing_2
+    border: none
+    border-radius: vars.$spacing_1
+
+    &:hover
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), vars.$green_600
+
 
 .error
     display: none
