@@ -51,6 +51,11 @@ body
     flex-direction: column
     gap: vars.$spacing_1
 
+.query_type_wrap
+    display: flex
+    flex-direction: column
+    gap: vars.$spacing_2
+
 .query_type_fieldset
     display: flex
     flex-direction: column
@@ -90,7 +95,6 @@ body
         outline: 1px solid vars.$green_600
 
 
-
 .query_wrap
     border: 1px solid vars.$gray_500
     border-radius: vars.$spacing_1
@@ -101,7 +105,6 @@ body
     display: flex
     gap: 0.75rem
     align-items: center
-    cursor: pointer
 
     &:hover
         border: 1px solid vars.$green_600
@@ -110,6 +113,11 @@ body
         font-size: clamp(1.125rem, 2vw, 1.25rem)
         line-height: 1.5
         color: vars.$gray_900
+        cursor: pointer
+
+    &:has(input[type="radio"]:checked)
+        background-color: vars.$green_200
+        border: 1px solid vars.$green_600
 
 .consent_to_contact
     display: flex
@@ -146,6 +154,9 @@ body
 .error
     display: none
     color: vars.$red
+    font-weight: 400
+    line-height: 1.5
+    font-size: clamp(1rem, 2vw, 1.25rem)
 
 .error_consent.active, .error_message.active, .error_query_type.active, .error_last_name.active, .error_first_name.active, .error_email.active
     display: block
