@@ -12,7 +12,7 @@ body
 
 .fw400
     font-weight: 400
-    
+
 .fw600
     font-weight: 600
 
@@ -44,7 +44,6 @@ body
     display: flex
     flex-direction: column
     gap: vars.$spacing_3
-
 
 .first_name, .last_name, .email_wrap, .message_wrap
     display: flex
@@ -94,7 +93,6 @@ body
         border: 1px solid vars.$green_600
         outline: 1px solid vars.$green_600
 
-
 .query_wrap
     border: 1px solid vars.$gray_500
     border-radius: vars.$spacing_1
@@ -108,16 +106,47 @@ body
 
     &:hover
         border: 1px solid vars.$green_600
-        
+
     label
         font-size: clamp(1.125rem, 2vw, 1.25rem)
         line-height: 1.5
         color: vars.$gray_900
         cursor: pointer
 
-    &:has(input[type="radio"]:checked)
+    &:has(input[type="radio"]:checked), &:has(.querytype_input:focus-visible)
         background-color: vars.$green_200
         border: 1px solid vars.$green_600
+
+    
+        // outline: 2px solid vars.$green_600
+        // outline-offset: 2px
+
+.support_request_label, .general_enquiry_label
+    display: flex
+    align-items: center
+    cursor: pointer
+    gap: vars.$spacing_1
+
+    .querytype_input:checked + .custom_radio
+        background-image: url('./src/assets/images/icon-radio-selected.svg')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        border: none
+
+.querytype_input
+    position: absolute
+    opacity: 0
+    width: 1px
+    height: 1px
+    pointer-events: none
+
+.custom_radio
+    width: 1.25rem
+    height: 1.25rem
+    border: 2px solid vars.$gray_500
+    border-radius: 50%
+    position: relative
 
 .consent_to_contact
     display: flex
@@ -129,14 +158,44 @@ body
     gap: vars.$spacing_2
     align-items: center
 
+    &:has(.consent_checkbox:focus-visible)
+        outline: 2px solid vars.$green_600
+        outline-offset: 4px
+
 .consent_label
     font-size: clamp(1rem, 2vw, 1.25rem)
     line-height: 1.5
     color: vars.$gray_900
-    margin-left: 1rem
+    position: relative
+    cursor: pointer
 
     span
         color: vars.$green_600
+
+.consent_checkbox
+    position: absolute
+    opacity: 0
+    width: 1px
+    height: 1px
+    pointer-events: none
+
+.custom_checkbox
+    width: 1.125rem
+    height: 1.125rem
+    aspect-ratio: 1 / 1
+    border: 2px solid vars.$gray_500
+    border-radius: 2px
+    position: relative
+    background-color: white
+    transition: background-image 0.2s ease
+    cursor: pointer
+
+.consent_checkbox:checked + .custom_checkbox
+    background-image: url('./src/assets/images/icon-checkbox-check.svg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    border: none
 
 .submit_btn
     font-size: clamp(1.125rem, 2vw, 1.25rem)
@@ -146,10 +205,10 @@ body
     padding: vars.$spacing_2
     border: none
     border-radius: vars.$spacing_1
+    cursor: pointer
 
     &:hover
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), vars.$green_600
-
 
 .error
     display: none
@@ -177,6 +236,3 @@ body
     color: vars.$red
 
 @include bp.breakpoint(48rem)
-    
-
-    

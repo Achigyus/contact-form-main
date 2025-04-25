@@ -46,13 +46,19 @@
             <fieldset class="query_type_fieldset">
               <legend>Query Type <span class="required">*</span></legend>
               <div class="query_wrap">
-                <input type="radio" name="querytype" id="general_enquiry" class="querytype_input" value="General Enquiry" required>
-                <label for="general_enquiry" class="general_enquiry_label fw400">General Enquiry</label>
+                <label for="general_enquiry" class="general_enquiry_label fw400">
+                  <input type="radio" name="querytype" id="general_enquiry" class="querytype_input" value="General Enquiry" required>
+                  <span class="custom_radio"></span>
+                  General Enquiry
+                </label>
               </div>
 
               <div class="query_wrap">
-                <input type="radio" name="querytype" id="support_request" class="querytype_input" value="Support Request">
-                <label for="support_request" class="support_request_label fw400">Support Request</label>
+                <label for="support_request" class="support_request_label fw400">
+                  <input type="radio" name="querytype" id="support_request" class="querytype_input" value="Support Request">
+                  <span class="custom_radio"></span>
+                  Support Request
+                </label>
               </div>
             </fieldset>
             <p class="error error_query_type">Please select a query type</p>
@@ -66,10 +72,11 @@
         </div>
 
         <div class="consent_to_contact">
-          <div class="consent_wrap">
+          <label class="consent_wrap">
             <input type="checkbox" name="consent" id="consent" class="consent_checkbox" required>
-            <label for="consent" class="consent_label">I consent to being contacted by the team <span class="required">*</span></label>
-          </div>
+            <span class="custom_checkbox"></span>
+            <p class="consent_label">I consent to being contacted by the team <span class="required">*</span></p>
+          </label>
           <p class="error error_consent" id="error_consent">To submit this form, please consent to being contacted</p>
         </div>
 
