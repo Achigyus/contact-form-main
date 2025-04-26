@@ -95,8 +95,9 @@ body
     color: vars.$gray_900
     cursor: pointer
 
-    &:hover, &:focus, &:active
+    &:hover, &:focus, &:active, &:focus-visible
         border: 1px solid vars.$green_600 !important
+        outline: none
 
 .query_wrap
     border: 1px solid vars.$gray_500
@@ -130,7 +131,7 @@ body
     gap: vars.$spacing_1
 
     .querytype_input:checked + .custom_radio
-        background-image: url('./src/assets/images/icon-radio-selected.svg')
+        background-image: url('/src/assets/images/icon-radio-selected.svg')
         background-size: cover
         background-position: center
         background-repeat: no-repeat
@@ -199,7 +200,7 @@ body
     cursor: pointer
 
 .consent_checkbox:checked + .custom_checkbox
-    background-image: url('./src/assets/images/icon-checkbox-check.svg')
+    background-image: url('/src/assets/images/icon-checkbox-check.svg')
     background-size: cover
     background-position: center
     background-repeat: no-repeat
