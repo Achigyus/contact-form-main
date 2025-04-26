@@ -21,6 +21,7 @@ body
 
 .main
     padding: vars.$spacing_4 vars.$spacing_2
+    position: relative
 
 .main_wrap
     background-color: vars.$white
@@ -29,10 +30,11 @@ body
     display: flex
     flex-direction: column
     gap: vars.$spacing_4
+    max-width: 46rem
 
 .contact_us_h1
     color: vars.$gray_900
-    font-size: clamp(2rem, 2vw, 2rem)
+    font-size: 2rem
     line-height: 1.0
 
 .contact_form
@@ -49,6 +51,10 @@ body
     display: flex
     flex-direction: column
     gap: vars.$spacing_1
+    flex: 1 1 0%
+
+    &:has(.error.active) .input
+        border: 1px solid vars.$red
 
 .query_type_wrap
     display: flex
@@ -70,7 +76,7 @@ body
             color: vars.$green_600
 
 .first_name_label, .last_name_label, .email_label, .message_label
-    font-size: clamp(1rem, 2vw, 1.25rem)
+    font-size: 1rem
     line-height: 1.5
     color: vars.$gray_900
     display: flex
@@ -84,31 +90,31 @@ body
     border: 1px solid vars.$gray_500
     border-radius: vars.$spacing_1
     padding: 0.75rem 1.5rem
-    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    font-size: 1.125rem
     line-height: 1.5
     color: vars.$gray_900
     cursor: pointer
 
     &:hover, &:focus, &:active
-        border: 1px solid vars.$green_600
-        outline: 1px solid vars.$green_600
+        border: 1px solid vars.$green_600 !important
 
 .query_wrap
     border: 1px solid vars.$gray_500
     border-radius: vars.$spacing_1
     padding: 0.75rem 1.5rem
-    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    font-size: 1.125rem
     line-height: 1.5
     color: vars.$gray_900
     display: flex
     gap: 0.75rem
     align-items: center
+    flex: 1 1 0%
 
     &:hover
         border: 1px solid vars.$green_600
 
     label
-        font-size: clamp(1.125rem, 2vw, 1.25rem)
+        font-size: 1.125rem
         line-height: 1.5
         color: vars.$gray_900
         cursor: pointer
@@ -116,10 +122,6 @@ body
     &:has(input[type="radio"]:checked), &:has(.querytype_input:focus-visible)
         background-color: vars.$green_200
         border: 1px solid vars.$green_600
-
-    
-        // outline: 2px solid vars.$green_600
-        // outline-offset: 2px
 
 .support_request_label, .general_enquiry_label
     display: flex
@@ -148,6 +150,12 @@ body
     border-radius: 50%
     position: relative
 
+
+.message_input
+    width: 100%
+    height: 15rem
+    resize: none
+
 .consent_to_contact
     display: flex
     flex-direction: column
@@ -163,7 +171,7 @@ body
         outline-offset: 4px
 
 .consent_label
-    font-size: clamp(1rem, 2vw, 1.25rem)
+    font-size: 1rem
     line-height: 1.5
     color: vars.$gray_900
     position: relative
@@ -198,7 +206,7 @@ body
     border: none
 
 .submit_btn
-    font-size: clamp(1.125rem, 2vw, 1.25rem)
+    font-size: 1.125rem
     line-height: 1.5
     color: vars.$white
     background-color: vars.$green_600
@@ -215,24 +223,61 @@ body
     color: vars.$red
     font-weight: 400
     line-height: 1.5
-    font-size: clamp(1rem, 2vw, 1.25rem)
+    font-size: 1rem
 
 .error_consent.active, .error_message.active, .error_query_type.active, .error_last_name.active, .error_first_name.active, .error_email.active
     display: block
 
 .success_message
+    position: absolute
+    top: 1.5rem
+    left: 0
+    right: 0
+    margin: auto
+    width: 87%
+    background-color: vars.$gray_900
+    color: vars.$green_200
+    padding: 1.5rem
+    border-radius: 0.75rem
     display: none
+    flex-direction: column
+    gap: vars.$spacing_1
+    max-width: 28.125rem
+    transition: all 0.2s ease-in-out
+    z-index: 1
 
 .success_message.active
-    display: block
+    display: flex
+
+.success_message_h2
+    color: vars.$white
+    display: flex
+    gap: vars.$spacing_1
+    align-items: center
+    font-size: 1.125rem
+    line-height: 1.5
+
+.success_message_p
+    font-size: 1rem
+    line-height: 1.5    
 
 .attribution_h2
     text-align: center
     padding: 0.5rem vars.$spacing_3
-    font-size: clamp(0.875rem, 2vw, 0.94rem)
+    font-size: 0.875rem
     text-wrap: initial
 
 .attribution a
     color: vars.$red
 
 @include bp.breakpoint(48rem)
+    .main
+        padding: 8rem vars.$spacing_5
+
+    .main_wrap
+        padding: vars.$spacing_5
+        margin: 0 auto
+
+    .full_name_wrap, .query_type_fieldset
+        flex-direction: row
+        gap: vars.$spacing_2

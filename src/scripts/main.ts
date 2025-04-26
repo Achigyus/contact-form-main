@@ -2,19 +2,36 @@ import '../sass/index.sass'
 
 const form = document.querySelector('.contact_form') as HTMLFormElement | null;
 const successMsgDiv = document.querySelector('.success_message') as HTMLDivElement | null;
+let submit = false
 
 if (form) {
   form.addEventListener('submit', handleSubmit);
+  form.addEventListener('input', handleFormInput);
 }
 
 function handleSubmit(event: Event) {
   event.preventDefault();
   const formData = new FormData(form!);
   const isValid = validateFormData(formData);
+  submit = true
   if (isValid && successMsgDiv) {
     form!.reset();
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    })
+    form?.focus()
     successMsgDiv.classList.add('active');
     setTimeout(() => successMsgDiv.classList.remove('active'), 3000);
+    submit = false
+  }
+}
+
+function handleFormInput() {
+  const formData = new FormData(form!);
+  if (submit) {
+    validateFormData(formData);
   }
 }
 

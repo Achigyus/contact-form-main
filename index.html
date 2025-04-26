@@ -25,20 +25,20 @@
           <div class="full_name_wrap">
             <div class="first_name">
               <label for="firstname" class="first_name_label fw400">First Name <span class="required">*</span></label>
-              <input type="text" name="firstname" id="firstname" class="first_name_input" placeholder="e.g. Stephen" required autocomplete="name">
+              <input type="text" name="firstname" id="firstname" class="input first_name_input" placeholder="e.g. Stephen" required autocomplete="first name">
               <p class="error error_first_name" id="error_first_name">This field is required</p>
             </div>
 
             <div class="last_name">
               <label for="lastname" class="last_name_label fw400">Last Name <span class="required">*</span></label>
-              <input type="text" name="lastname" id="lastname" class="last_name_input" placeholder="e.g. Huang" required>
+              <input type="text" name="lastname" id="lastname" class="input last_name_input" placeholder="e.g. Huang" required autocomplete="last name">
               <p class="error error_last_name" id="error_last_name">This field is required</p>
             </div>
           </div>
 
           <div class="email_wrap">
             <label for="email" class="email_label fw400">Email Address <span class="required">*</span></label>
-            <input type="email" name="email" id="email" class="email_input" placeholder="e.g. stephen.huang@gmail.com" required >
+            <input type="email" name="email" id="email" class="input email_input" placeholder="e.g. stephen.huang@gmail.com" required autocomplete="email">
             <p class="error error_email" id="error_email">This field is required</p>
           </div>
 
@@ -66,7 +66,7 @@
 
           <div class="message_wrap">
             <label for="message" class="message_label fw400">Message <span class="required">*</span></label>
-            <textarea name="message" id="message" class="message_input" placeholder="e.g. I would like to know more about your services" required></textarea>
+            <textarea name="message" id="message" class="input message_input" placeholder="e.g. I would like to know more about your services" required autocomplete="message"></textarea>
             <p class="error error_message" id="error_message">This field is required</p>
           </div>
         </div>
@@ -87,8 +87,8 @@
 
       <!-- Success Message -->
       <div class="success_message">
-        <h2 class="success_message_h2"><img src="./src/assets/images/icon-success-check.svg" alt="check mark"> Message Sent!</h2>
-        <p class="success_message_p">Thanks for completing the form. We'll be in touch soon!</p>
+        <h2 class="success_message_h2 fw700"><img src="./src/assets/images/icon-success-check.svg" alt="check mark"> Message Sent!</h2>
+        <p class="success_message_p fw400">Thanks for completing the form. We'll be in touch soon!</p>
     </div>
   </main>
 
